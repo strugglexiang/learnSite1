@@ -1,0 +1,140 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	/*background: red;*/
+}
+
+.seciton{
+	width: 100%;
+	/*height: 800px;*/
+	background:rgba(204,204,153,0.5) url(../img/lanqiu.png) no-repeat;
+	background-size: 50%;
+}
+/*----------注册盒子*/
+.seciton>div{
+	position: absolute;
+	width:570px;
+	height: 400px;
+	/*background: red;*/
+	right:180px;
+	top: 150px;
+	/*background: rgb(255,255,255);*/
+	/*border: 1px solid #ccc;*/
+}
+/*各个选项*/
+.seciton>div>div{
+	width: 100%;
+	height: 45px;
+	margin-top: 15px;
+	/*border: 1px solid #CCCCCC*/
+}
+/*选项中的图标*/
+.seciton>div>div>.tubiao{
+	width: 45px;
+	height: 45px;
+	float: left;
+}
+/*身份选择*/
+.shenfen>.tubiao{
+	background: #f55d54;
+	text-align: center;
+	color: white;
+	user-select:none; 
+	font-size: 16px;  
+}
+.shenfen>select{
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	height: 45px;
+	width: 215px;
+	padding-left: 15px;
+}
+.telbox>.tubiao{
+	background: white url(../img/small/tel.png) no-repeat center;
+}
+.namebox>.tubiao{
+	background: white url(../img/small/name.png) no-repeat center;
+}
+.passbox>.tubiao{
+	background: white url(../img/small/pass.png) no-repeat center;
+}
+.passboxagin>.tubiao{
+	background: white url(../img/small/pass.png) no-repeat center;
+}
+	/*选项中的输入框*/
+.seciton>div>div>input{
+	float: left;
+	outline: none;
+	border: none;
+	height: 45px;
+	width:215px ;
+	box-sizing: border-box;
+	padding-left: 12px;
+	font-size: 14px;
+	border-right: 1px solid #ccc;
+}
+
+/*注册按钮部分*/
+.seciton>div>div>.bt{
+	width: 260px;
+	height: 45px;
+	background: #f55d54;
+}
+.seciton>div>div>.bt>span{
+	display: block;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 45px;
+	color: white;
+	user-select:none;
+}
+
+/*检查部分*/
+.seciton>div>div>.check{
+	float: left;
+	width: 310px;
+	height: 45px;
+	float: left;
+	overflow: hidden;
+	line-height: 45px;
+	box-sizing: border-box;
+	padding-left: 15px;
+	
+}
+.seciton>div>div>.check>p{
+	 height: 45px;
+	font-size: 12px;
+	color: #333;
+	display: none;
+	box-sizing: border-box;
+	padding-left: 20px;
+	
+}
+.seciton>div>div>.check>p.normal{
+	display: block;
+}
+.seciton>div>div>.check>p.right{
+	background: url(../img/small/right.png) no-repeat left;
+	background-size:20px 20px ;
+}
+.seciton>div>div>.check>p.err{
+	background: url(../img/small/err.png) no-repeat left ;
+	background-size:20px 20px ;
+}
+.seciton>div>div>.check>p.err1{
+	background: url(../img/small/err.png) no-repeat left;
+	background-size:20px 20px ;
+}
+
+.seciton>div>div>.check>p.err2{
+	background: url(../img/small/err.png) no-repeat left;
+	background-size:20px 20px ;
+}
+.seciton>div>div>.check>p.err3{
+	background: url(../img/small/err.png) no-repeat left;
+	background-size:20px 20px ;
+}
+

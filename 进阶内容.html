@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="img/favicon.png"/>
+		<link rel="stylesheet" type="text/css" href="css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/returnTop.css"/>
+		<link rel="stylesheet" type="text/css" href="css/resource-section.css"/>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<title>进阶知识</title>
+	</head>
+	<body>
+		<div class="header">
+			 <div>
+			 	  <div class="header-left"></div>
+			 	  <!--登陆框部分-->
+			 	  <div class="header-right">
+			 	  	  <ul class="weidenglu">
+			 	  	  	<li>
+			 	  	  		<div class="header-yingying"></div>
+			 	  	  		<a href="login.html">登陆</a>			 	  	  		
+			 	  	  	</li>
+			 	  	  	<li>
+			 	  	  	    <div class="header-yingying"></div>
+			 	  	  		<a href="register.html">注册</a>			 	  	  	
+			 	  	  	</li>
+			 	  	  </ul>
+			 	  	  <ul class="yidenglu">
+			 	  	  	   <li  class="qxsy" >
+				 	  	  	   	 <a href="#" title="权限使用"></a>
+			 	  	  	   </li>
+			 	  	  	   <li  class="grzx" >
+				 	  	  	   	 <a href="#" title="个人中心"></a>
+			 	  	  	   </li>
+			 	  	  	   <li class="touxiang">
+			 	  	  	   	  <div>
+			 	  	  	   	  	 <img src="img/touxiang.jpg"/>
+			 	  	  	   	  </div>
+			 	  	  	   </li>
+			 	  	  </ul>
+			 	  </div>
+			 	  <!--搜索框部分-->
+			 	  <div class="header-center">
+			 	  	   <span class="sousuobox-bt"></span>
+			 	  	   <div class="sousuobox">
+			 	  	   	   <i class="sousuobox-i"></i>
+			 	  	   	   <input class="sousuobox-input" type="text" />  			 	  	   	   
+			 	  	   </div>
+			 	  	   
+			 	  	   
+			 	  </div>	
+			 	  <!--多余部分-->
+			 	  <div class="header-duoyu">
+			 	  	   <ul>
+			 	  	   	   <li>
+			 	  	   	   	  <div class="header-yingying"></div>
+			 	  	   	   	  <a href="index.html">首页</a>
+			 	  	   	   </li>
+			 	  	   	   <li>
+			 	  	   	   	  <div class="header-yingying"></div>
+			 	  	   	   	  <a href="index.html">待定</a>
+			 	  	   	   </li>
+			 	  	   </ul>
+			 	  </div>
+			 </div>
+		</div>
+		<script src="js/header.js" type="text/javascript" charset="utf-8"></script>	
+		<!--头部的傀儡-->
+		<div class="kuilei"></div>
+		<!--内容部分-->
+		<div class="section">
+			 <div class="section-left">
+			 	 <div>
+			 	 	<ul>
+			 	 		<li><a href="#f1" class="dianji" >Java 继承</a></li>
+			 	 		<li><a href="#f2">Java 重写与重载</a></li>
+			 	 		<li><a href="#f3">Java 多态</a></li>
+			 	 		<li><a href="#f4">Java 抽象类</a></li>
+			 	 		<li><a href="#f5">Java 封装</a></li>
+			 	 		<li><a href="#f6">Java 接口</a></li>
+			 	 		<li><a href="#f7">Java 包(package)</a></li>
+			 	 		
+			 	 	</ul>
+			 	 </div>
+			 </div>
+			 <div class="section-right">
+			 	  <div id="f1" class="neirongkuai">
+			 	  	 <div class="biaoti">
+			 	  	 	  <h3>#Java 继承</h3>
+			 	  	 </div>
+			 	  	 <div class="jieshi">
+			 	  	 	  <p>
+			 	  	 	  	   继承是java面向对象编程技术的一块基石，因为它允许创建分等级层次的类。继承可以理解为一个对象从另一个对象获取属性的过程。
+							如果类A是类B的父类，而类B是类C的父类，我们也称C是A的子类，类C是从类A继承而来的。在Java中，类的继承是单一继承，也就是说，一个子类只能拥有一个父类
+							继承中最常使用的两个关键字是extends和implements。
+							这两个关键字的使用决定了一个对象和另一个对象是否是IS-A(是一个)关系。
+							通过使用这两个关键字，我们能实现一个对象获取另一个对象的属性。
+							所有Java的类均是由java.lang.Object类继承而来的，所以Object是所有类的祖先类，而除了Object外，所有类必须有一个父类。
+							通过过extends关键字可以申明一个类是继承另外一个类而来的，一般形式如下：
+			 	  	 	  </p>
+			 	  	 </div>
+			 	  	 <div class="daima">
+<pre>
+// A.java
+public class A {
+    private int i;
+    protected int j;
+ 
+    public void func() {
+ 
+    }
+}
+ 
+// B.java
+public class B extends A {
+}
+</pre>
+						
+			 	  	 </div>
+			 	  </div>
+<!----------------------f2------------------->
+			 	  <div id="f2" class="neirongkuai">
+			 	  	 <div class="biaoti">
+			 	  	 	  <h3>#Java 重载与重写</h3>
+			 	  	 </div>
+			 	  	 <div class="jieshi">
+			 	  	 	  <p>
+			 	  	 	  	  重写是子类对父类的允许访问的方法的实现过程进行重新编写！返回值和形参都不能改变。即外壳不变，核心重写！
+							   重写的好处在于子类可以根据需要，定义特定于自己的行为。也就是说子类能够根据需要实现父类的方法。
+                                                                      在面向对象原则里，重写意味着可以重写任何现有方法。实例如下：
+			 	  	 	  </p>
+			 	  	 	
+			 	  	 </div>
+			 	  	 <div class="daima">
+<pre>
+class Animal{
+
+   public void move(){
+      System.out.println("动物可以移动");
+   }
+}
+
+class Dog extends Animal{
+
+   public void move(){
+      System.out.println("狗可以跑和走");
+   }
+}
+
+public class TestDog{
+
+   public static void main(String args[]){
+      Animal a = new Animal(); // Animal 对象
+      Animal b = new Dog(); // Dog 对象
+
+      a.move();// 执行 Animal 类的方法
+
+      b.move();//执行 Dog 类的方法
+   }
+}
+</pre>
+						
+			 	  	 </div>
+			 	  </div>
+
+<!----------------------f3------------------->
+			 	  <div id="f3" class="neirongkuai">
+			 	  	 <div class="biaoti">
+			 	  	 	  <h3>#Java 多态</h3>
+			 	  	 </div>
+			 	  	 <div class="jieshi">
+			 	  	 	  <p>
+			 	  	 	  	多态是同一个行为具有多个不同表现形式或形态的能力。
+							多态性是对象多种表现形式的体现。
+							比如我们说"宠物"这个对象，它就有很多不同的表达或实现，比如有小猫、小狗、蜥蜴等等。那么我到宠物店说"请给我一只宠物"，服务员给我小猫、小狗或者蜥蜴都可以，我们就说"宠物"这个对象就具备多态性。
+							接下来让我们通过实例来了解Java的多态。
+			 	  	 	  </p>
+			 	  	 </div>
+			 	  	 <div class="daima">
+<pre>
+public interface Vegetarian{}
+public class Animal{}
+public class Deer extends Animal implements Vegetarian{}
+</pre>
+						
+			 	  	 </div>
+			 	  </div>
+
+<!----------------------f4------------------->
+			 	  <div id="f4" class="neirongkuai">
+			 	  	 <div class="biaoti">
+			 	  	 	  <h3>#Java 抽象类</h3>
+			 	  	 </div>
+			 	  	 <div class="jieshi">
+			 	  	 	<p>
+			 	  	 		在面向对象的概念中，所有的对象都是通过类来描绘的，但是反过来，并不是所有的类都是用来描绘对象的，如果一个类中没有包含足够的信息来描绘一个具体的对象，这样的类就是抽象类。
+							抽象类除了不能实例化对象之外，类的其它功能依然存在，成员变量、成员方法和构造方法的访问方式和普通类一样。
+							由于抽象类不能实例化对象，所以抽象类必须被继承，才能被使用。也是因为这个原因，通常在设计阶段决定要不要设计抽象类。
+							父类包含了子类集合的常见的方法，但是由于父类本身是抽象的，所以不能使用这些方法。
+			 	  	 	</p>
+			 	  	 	  	
+			 	  	 </div>
+			 	  	 <div class="daima">
+<pre>
+/* 文件名 : Employee.java */
+public abstract class Employee
+{
+   private String name;
+   private String address;
+   private int number;
+   public Employee(String name, String address, int number)
+   {
+      System.out.println("Constructing an Employee");
+      this.name = name;
+      this.address = address;
+      this.number = number;
+   }
+   public double computePay()
+   {
+     System.out.println("Inside Employee computePay");
+     return 0.0;
+   }
+   public void mailCheck()
+   {
+      System.out.println("Mailing a check to " + this.name
+       + " " + this.address);
+   }
+   public String toString()
+   {
+      return name + " " + address + " " + number;
+   }
+   public String getName()
+   {
+      return name;
+   }
+   public String getAddress()
+   {
+      return address;
+   }
+   public void setAddress(String newAddress)
+   {
+      address = newAddress;
+   }
+   public int getNumber()
+   {
+     return number;
+   }
+} 
+</pre>
+						<p>我们能通过一般的方法继承Employee类：</p>
+<pre>
+/* 文件名 : Salary.java */
+public class Salary extends Employee
+{
+   private double salary; //Annual salary
+   public Salary(String name, String address, int number, double
+      salary)
+   {
+       super(name, address, number);
+       setSalary(salary);
+   }
+   public void mailCheck()
+   {
+       System.out.println("Within mailCheck of Salary class ");
+       System.out.println("Mailing check to " + getName()
+       + " with salary " + salary);
+   }
+   public double getSalary()
+   {
+       return salary;
+   }
+   public void setSalary(double newSalary)
+   {
+       if(newSalary >= 0.0)
+       {
+          salary = newSalary;
+       }
+   }
+   public double computePay()
+   {
+      System.out.println("Computing salary pay for " + getName());
+      return salary/52;
+   }
+}	
+</pre>
+			 	  	 </div>
+			 	  </div>
+			 	  
+			  <!-----------f5------------------------------>
+			 	  <div id="f5" class="neirongkuai">
+			 	  	 <div class="biaoti">
+			 	  	 	  <h3>#Java 封装</h3>
+			 	  	 </div>
+			 	  	 <div class="jieshi">
+			 	  	 	  <h5>对象</h5>
+			 	  	 	  <p>
+			 	  	 	  	 在面向对象程式设计方法中，封装（英语：Encapsulation）是指，一种将抽象性函式接口的实作细节部份包装、隐藏起来的方法。
+							封装可以被认为是一个保护屏障，防止该类的代码和数据被外部类定义的代码随机访问。
+							要访问该类的代码和数据，必须通过严格的接口控制。
+							封装最主要的功能在于我们能修改自己的实现代码，而不用修改那些调用我们代码的程序片段。
+							适当的封装可以让程式码更容易理解与维护，也加强了程式码的安全性。
+			 	  	 	  </p>
+			 	  	 </div>
+			 	  	 <div class="daima">
+<pre>
+/* 文件名: EncapTest.java */
+public class EncapTest{
+
+   private String name;
+   private String idNum;
+   private int age;
+
+   public int getAge(){
+      return age;
+   }
+
+   public String getName(){
+      return name;
+   }
+
+   public String getIdNum(){
+      return idNum;
+   }
+
+   public void setAge( int newAge){
+      age = newAge;
+   }
+
+   public void setName(String newName){
+      name = newName;
+   }
+
+   public void setIdNum( String newId){
+      idNum = newId;
+   }
+}	
+</pre>
+						
+			 	  	 </div>
+			 	 </div>
+
+		 <!-----------------f6------------------------>	 	  
+			 	  <div id="f6" class="neirongkuai">
+			 	  	 <div class="biaoti">
+			 	  	 	  <h3>#接口</h3>
+			 	  	 </div>
+			 	  	 <div class="jieshi">
+			 	  	 	  <p>
+							接口（英文：Interface），在JAVA编程语言中是一个抽象类型，是抽象方法的集合，接口通常以interface来声明。一个类通过继承接口的方式，从而来继承接口的抽象方法。
+							接口并不是类，编写接口的方式和类很相似，但是它们属于不同的概念。类描述对象的属性和方法。接口则包含类要实现的方法。
+							除非实现接口的类是抽象类，否则该类要定义接口中的所有方法。
+							接口无法被实例化，但是可以被实现。一个实现接口的类，必须实现接口内所描述的所有方法，否则就必须声明为抽象类。另外，在Java中，接口类型可用来声明一个变量，他们可以成为一个空指针，或是被绑定在一个以此接口实现的对象。
+			 	  	 	  </p>
+			 	  	 </div>
+			 	  	 <div class="daima">
+<pre>
+接口的声明语法格式如下：
+[可见度] interface 接口名称 [extends 其他的类名] {
+        // 声明变量
+        // 抽象方法
+}
+Interface关键字用来声明一个接口。下面是接口声明的一个简单例子。
+/* 文件名 : NameOfInterface.java */
+import java.lang.*;
+//引入包
+
+public interface NameOfInterface
+{
+   //任何类型 final, static 字段
+   //抽象方法
+}
+</pre>
+						
+			 	  	 </div>
+			 	  </div>
+       <!------------------f7----------------------->
+			 	  <div id="f7" class="neirongkuai">
+			 	  	 <div class="biaoti">
+			 	  	 	  <h3>#Java 包(package)</h3>
+			 	  	 </div>
+			 	  	 <div class="jieshi">
+			 	  	 	  <p>
+							为了更好地组织类，Java提供了包机制，用于区别类名的命名空间。包语句的语法格式为：					
+			 	  	 	  </p>
+
+			
+			 	  	 </div>
+			 	  	 <div class="daima">
+<pre>
+package pkg1[．pkg2[．pkg3…]];
+例如,一个Something.java 文件它的内容
+package net.java.util
+public class Something{
+   ...
+}
+</pre>
+						
+			 	  	 </div>
+			 	  </div>
+		 	  
+			 </div>
+		</div>
+		<!--内容部分js-->
+		<script src="js/resource-section.js" type="text/javascript" charset="utf-8"></script>
+	    <!--返回顶部组件-->
+	    <script src="js/returnTop.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

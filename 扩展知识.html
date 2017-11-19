@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="img/favicon.png"/>
+		<link rel="stylesheet" type="text/css" href="css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/returnTop.css"/>
+		<link rel="stylesheet" type="text/css" href="css/resource-section.css"/>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<title>进阶知识</title>
+	</head>
+	<body>
+		<div class="header">
+			 <div>
+			 	  <div class="header-left"></div>
+			 	  <!--登陆框部分-->
+			 	  <div class="header-right">
+			 	  	  <ul class="weidenglu">
+			 	  	  	<li>
+			 	  	  		<div class="header-yingying"></div>
+			 	  	  		<a href="login.html">登陆</a>			 	  	  		
+			 	  	  	</li>
+			 	  	  	<li>
+			 	  	  	    <div class="header-yingying"></div>
+			 	  	  		<a href="register.html">注册</a>			 	  	  	
+			 	  	  	</li>
+			 	  	  </ul>
+			 	  	  <ul class="yidenglu">
+			 	  	  	   <li  class="qxsy" >
+				 	  	  	   	 <a href="#" title="权限使用"></a>
+			 	  	  	   </li>
+			 	  	  	   <li  class="grzx" >
+				 	  	  	   	 <a href="#" title="个人中心"></a>
+			 	  	  	   </li>
+			 	  	  	   <li class="touxiang">
+			 	  	  	   	  <div>
+			 	  	  	   	  	 <img src="img/touxiang.jpg"/>
+			 	  	  	   	  </div>
+			 	  	  	   </li>
+			 	  	  </ul>
+			 	  </div>
+			 	  <!--搜索框部分-->
+			 	  <div class="header-center">
+			 	  	   <span class="sousuobox-bt"></span>
+			 	  	   <div class="sousuobox">
+			 	  	   	   <i class="sousuobox-i"></i>
+			 	  	   	   <input class="sousuobox-input" type="text" />  			 	  	   	   
+			 	  	   </div>
+			 	  	   
+			 	  	   
+			 	  </div>	
+			 	  <!--多余部分-->
+			 	  <div class="header-duoyu">
+			 	  	   <ul>
+			 	  	   	   <li>
+			 	  	   	   	  <div class="header-yingying"></div>
+			 	  	   	   	  <a href="index.html">首页</a>
+			 	  	   	   </li>
+			 	  	   	   <li>
+			 	  	   	   	  <div class="header-yingying"></div>
+			 	  	   	   	  <a href="index.html">待定</a>
+			 	  	   	   </li>
+			 	  	   </ul>
+			 	  </div>
+			 </div>
+		</div>
+		<script src="js/header.js" type="text/javascript" charset="utf-8"></script>	
+		<!--头部的傀儡-->
+		<div class="kuilei"></div>
+		<!--内容部分-->
+		<div class="section">
+			 <div class="section-left">
+			 	 <div>
+			 	 	<ul>
+			 	 		<li><a href="#f1" class="dianji" > Java基础类库</a></li>
+			 	 		<li><a href="#f2"> Object类</a></li>
+			 	 		<li><a href="#f3">Java语言包(java.lang)简介</a></li>
+			 	 		<li><a href="#f4"> 日期和时间类</a></li>
+			 	 		<li><a href="#f5">向量及其应用</a></li>
+			 	 		<li><a href="#f6">哈希表及其应用</a></li>
+			 	 		
+			 	 	</ul>
+			 	 </div>
+			 </div>
+			 <div class="section-right">
+			 	  <div id="f1" class="neirongkuai">
+			 	  	 <div class="biaoti">
+			 	  	 	  <h3>#Java 基础类库</h3>
+			 	  	 </div>
+			 	  	 <div class="jieshi">
+			 	  	 	  <p>
+			 	  	 	  	  Java 的类库是 Java 语言提供的已经实现的标准类的集合，是 Java 编程的 API（Application Program Interface），它可以帮助开发者方便、快捷地开发 Java 程序。这些类根据实现的功能不同，可以划分为不同的集合，每个集合组成一个包，称为类库。Java 类库中大部分都是由Sun 公司提供的，这些类库称为基础类库。
+
+                              Java 语言中提供了大量的类库共程序开发者来使用，了解类库的结构可以帮助开发者节省大量的编程时间，而且能够使编写的程序更简单更实用。Java 中丰富的类库资源也是 Java 语言的一大特色，是 Java 程序设计的基础。
+			 	  	 	  </p>
+			 	  	 </div>
+			 	  	 <div class="daima">
+<pre>
+1 java.lang 包：主要含有与语言相关的类。java.lang 包由解释程序自动加载，不需要显示说明。
+2 java.io 包：主要含有与输入/输出相关的类，这些类提供了对不同的输入和输出设备读写数据的支持，
+这些输入和输出设备包括键盘、显示器、打印机、磁盘文件等。
+3 java.util 包：包括许多具有特定功能的类，有日期、向量、哈希表、堆栈等，其中 Date类支持与时间有关的操作。
+4 java.swing 包和 java.awt 包：提供了创建图形用户界面元素的类。
+通过这些元素，编程者可以控制所写的 Applet 或 Application 的外观界面。包中包含了窗口、对话框、菜单等类。
+5 java.net 包：含有与网络操作相关的类，如 TCP Scokets、URL 等工具。
+6 java.applet 包：含有控制 HTML 文档格式、应用程序中的声音等资源的类，其中 Applet类是用来创建包含于 HTML 的 Applet 必不可少的类。
+7 java.beans 包：定义了应用程序编程接口（API），Java Beans 是 Java 应用程序环境的中性平台组件结构。
+</pre>
+						
+			 	  	 </div>
+			 	  </div>
+<!----------------------f2------------------->
+			 	  <div id="f2" class="neirongkuai">
+			 	  	 <div class="biaoti">
+			 	  	 	  <h3>#Java Object类</h3>
+			 	  	 </div>
+			 	  	 <div class="jieshi">
+			 	  	 	  <p>
+			 	  	 	  	Object 类位于 java.lang 包中，是所有 Java 类的祖先，Java 中的每个类都由它扩展而来。
+			 	  	 	  </p>
+			 	  	 	  <p>
+			 	  	 	  	在Java中，只有基本类型不是对象，例如数值、字符和布尔型的值都不是对象，所有的数组类型，不管是对象数组还是基本类型数组都是继承自 Object 类。
+
+                            Object 类定义了一些有用的方法，由于是根类，这些方法在其他类中都存在，一般是进行了重载或覆盖，实现了各自的具体功能。
+			 	  	 	  </p>
+			 	  	 </div>
+			 	  	 <div class="daima">
+<pre>
+定义Java类时如果没有显示的指明父类，那么就默认继承了 Object 类。例如：
+public class Demo{
+    // ...
+}
+实际上是下面代码的简写形式：
+public class Demo extends Object{
+    // ...
+}
+</pre>
+						
+			 	  	 </div>
+			 	  </div>
+
+<!----------------------f3------------------->
+			 	  <div id="f3" class="neirongkuai">
+			 	  	 <div class="biaoti">
+			 	  	 	  <h3>#Java语言包(java.lang)简介</h3>
+			 	  	 </div>
+			 	  	 <div class="jieshi">
+			 	  	 	  <p>
+			 	  	 	  	Java语言包（java.lang）定义了Java中的大多数基本类，由Java语言自动调用，不需要显示声明。该包中包含了Object类，Object类是整个类层次结构的根结点，同时还定义了基本数据类型的类，如：String、Boolean、Byter、Short等。这些类支持数字类型的转换和字符串的操作等，下面将进行简单介绍。
+			 	  	 	  </p>
+			 	  	 </div>
+			 	  	 <div class="daima">
+<pre>
+Math类
+Math类提供了常用的数学运算方法以及Math.PI和Math.E两个数学常量。
+该类是final的，不能被继承，类中的方法和属性全部是静态，不允许在类的外部创建Math类的对象。
+因此，只能使用Math类的方法而不能对其作任何更改。
+字符串类
+字符串是字符的序列。在 Java 中，字符串无论是常量还是变量都是用类的对象来实现的。
+java.lang 提供了两种字符串类：String 类和 StringBuffer 类。
+</pre>
+						
+			 	  	 </div>
+			 	  </div>
+
+<!----------------------f4------------------->
+			 	  <div id="f4" class="neirongkuai">
+			 	  	 <div class="biaoti">
+			 	  	 	  <h3>#Java 日期和时间类</h3>
+			 	  	 </div>
+			 	  	 <div class="jieshi">
+			 	  	 	<p>
+			 	  	 		Java 的日期和时间类位于 java.util 包中。利用日期时间类提供的方法，可以获取当前的日期和时间，创建日期和时间参数，计算和比较时间。
+			 	  	 	</p>
+			 	  	 	  	
+			 	  	 </div>
+			 	  	 <div class="daima">
+<pre>
+请看一个显示日期时间的例子：
+import java.util.Date;
+public class Demo{
+    public static void main(String args[]){
+        Date da=new Date();  //创建时间对象
+        System.out.println(da); //显示时间和日期
+        long msec=da.getTime();
+        System.out.println("从1970年1月1日0时到现在共有：" + msec + "毫秒");
+    }
+}
+运行结果：
+Mon Feb 05 22:50:05 CST 2007
+从1970年1月1日0时到现在共有：1170687005390 毫秒
+</pre>
+
+			 	  	 </div>
+			 	  </div>
+			 	  
+			  <!-----------f5------------------------------>
+			 	  <div id="f5" class="neirongkuai">
+			 	  	 <div class="biaoti">
+			 	  	 	  <h3>Java向量(Vector)及其应用</h3>
+			 	  	 </div>
+			 	  	 <div class="jieshi">
+			 	  	 	  <h5>对象</h5>
+			 	  	 	  <p>
+			 	  	 	  	 向量和数组相似，都可以保存一组数据（数据列表）。但是数组的大小是固定的，一旦指定，就不能改变，而向量却提供了一种类似于“动态数组”的功能，向量与数组的重要区别之一就是向量的容量是可变的。
+			 	  	 	  </p>
+			 	  	 </div>
+			 	  	 <div class="daima">
+<pre>
+Vector();  //①创建空向量，初始大小为 10
+Vector(int initialCapacity); 
+ //②创建初始容量为 capacity 的空向量
+Vector(int initialCapacity,int capacityIncrement); 
+ //③创建初始容量为 initialCapacity，增量为 capacityIncrement 的空向量
+</pre>
+						
+			 	  	 </div>
+			 	 </div>
+
+		 <!-----------------f6------------------------>	 	  
+			 	  <div id="f6" class="neirongkuai">
+			 	  	 <div class="biaoti">
+			 	  	 	  <h3>Java哈希表及其应用</h3>
+			 	  	 </div>
+			 	  	 <div class="jieshi">
+			 	  	 	  <p>
+							数组和向量都可以存储对象，但对象的存储位置是随机的，也就是说对象本身与其存储位置之间没有必然的联系。当要查找一个对象时，只能以某种顺序（如顺序查找或二分查找）与各个元素进行比较，当数组或向量中的元素数量很多时，查找的效率会明显的降低。
+
+                                                                   一种有效的存储方式，是不与其他元素进行比较，一次存取便能得到所需要的记录。这就需要在对象的存储位置和对象的关键属性（设为 k）之间建立一个特定的对应关系（设为 f），使每个对象与一个唯一的存储位置相对应。
+                                                                   在查找时，只要根据待查对象的关键属性 k 计算f(k)的值即可。如果此对象在集合中，则必定在存储位置 f(k)上，因此不需要与集合中的其他元素进行比较。称这种对应关系 f 为哈希（hash）方法，按照这种思想建立的表为哈希表。
+			 	  	 	  </p>
+			 	  	 </div>
+			 	  	 <div class="daima">
+<pre>
+【例 8-12】哈希表的遍历。
+//********** ep8_12.java **********
+import java.util.*;
+class ep8_12{
+    public static void main(String args[]){
+        Hashtable has=new Hashtable();
+        has.put("one",new Integer(1));
+        has.put("two",new Integer(2));
+        has.put("three",new Integer(3));
+        has.put("four",new Double(12.3));
+        Set s=has.keySet();
+        for(Iterator<String> i=s.iterator();i.hasNext();){
+            System.out.println(has.get(i.next()));
+        }
+    }
+}
+运行结果：
+2
+1
+3
+12.3
+</pre>
+						
+			 	  	 </div>
+			 	  </div>
+ 
+		 	  
+			 </div>
+		</div>
+		<!--内容部分js-->
+		<script src="js/resource-section.js" type="text/javascript" charset="utf-8"></script>
+	    <!--返回顶部组件-->
+	    <script src="js/returnTop.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

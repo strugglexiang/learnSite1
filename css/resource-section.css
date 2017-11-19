@@ -1,0 +1,107 @@
+.header{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	/*border-bottom: 2px solid #C0C0C0;*/
+}
+.kuilei{
+	height: 75px;
+	
+}
+.section{
+	/*height: 1000px;*/
+	/*background: white;*/
+	/*background: #f8f8f8;*/
+}
+/*--------------导航部分---------------*/
+.section-left{
+	width: 20%;
+	height: 100px;
+	/*background: red;*/
+	float: left;
+	
+}
+.section-left>div{
+	width: 20%;
+	/*background: goldenrod;*/
+	position: fixed;
+	box-sizing: border-box;
+	overflow-y: scroll;
+}
+.section-left>div>ul{
+    list-style: none;
+}
+.section-left>div>ul>li{
+	height: 50px;
+}
+.section-left>div>ul>li>a{
+	box-sizing: border-box;
+	padding-left: 30px;
+	background: url(../img/small/shu.png) no-repeat left center;
+	/*border-left: 5px solid seagreen;*/
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	color: black;
+	text-decoration: none;
+	border-left: 5px solid transparent;
+	/*border-bottom: 1px solid #ccc;*/
+}
+.section-left>div>ul>li>a.dianji{
+	border-left: 5px solid #42b983;
+	font-weight: 800;
+	color: #42b983;
+}
+
+
+/*-----------内容部分------------*/
+.section-right{
+	float: left;
+	/*height: 100px;*/
+	width: 79%;
+	margin-left: 1%;
+	box-sizing: border-box;
+	padding-left: 50px;
+	background: rgb(255,255,255) !important;
+	}
+/*每一个内容部分*/
+.section-right>div{
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+
+.neirongkuai{
+	
+}
+/*标题*/
+.neirongkuai>.biaoti{
+	color:#42b983;
+}
+.neirongkuai>.biaoti{
+	width: 60%;
+	box-sizing: border-box;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #ccc;
+}
+/*介绍*/
+.neirongkuai>.jieshi{
+    margin-top: 15px;
+	/*background: black;*/
+}
+.neirongkuai>.jieshi>p{
+	width: 60%;
+}
+/*代码*/
+.neirongkuai>.daima{
+	width: 60%;
+	/*height: 100px;*/
+	background: rgb(248,248,248);
+	margin-top: 30px;
+	color: #900b09;
+}
+.neirongkuai>.daima>prep{
+	width: 100%;
+	overflow: hidden;
+}
+
+

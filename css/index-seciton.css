@@ -1,0 +1,255 @@
+.section{
+	 width: 100%;
+	 height: 300px;
+	 /*background: red;*/
+	 position: relative;
+}
+.huxifugai{
+	 position:absolute;
+	 left: 0px;
+	 top: 0px;
+	 width: 100%;
+	 height: 100%;
+	 /*background: black;*/
+}
+/*--------------呼吸轮播部分------------*/
+.huxifugai>ul{
+	list-style: none;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.huxifugai>ul>li{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.huxi-1{
+	/*background: pink;*/
+	background: rgb(11,55,27);
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+.huxi-2{
+	/*background: black;*/
+	background: rgb(62,23,143);
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.huxi-3{
+	/*background: red;*/
+	background: rgb(18,18,49);
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.huxi-4{
+	/*background: yellowgreen;*/
+	background: rgb(88,82,72);
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.huxi-5{
+	/*background: red;*/
+	background: rgb(27,45,85);
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+/*----------------中间内容部分--------------------*/
+.section-context{
+	 width: 1200px;
+	 height: 100%;
+	 position: absolute;
+	 left: 50%;
+	 margin-left: -600px;
+	 /*background: salmon;*/
+}
+.section-context>div{
+	float: left;
+}
+
+/*左边导航*/
+.section-context-left{
+	width: 275px;
+	height: 300px;
+	background: white;
+}
+.section-context-left>ul{
+	list-style: none;
+	position: relative;
+}
+.section-context-left>ul>li{
+	width: 270px;
+	height: 50px;
+	background: white;
+	transition: all 0.7s ease 0s;
+}
+/*边框颜色*/
+.section-context-left>ul>li:nth-child(1){
+	border-left: 5px solid saddlebrown;
+}
+.section-context-left>ul>li:nth-child(2){
+	border-left: 5px solid blueviolet;
+}
+.section-context-left>ul>li:nth-child(3){
+	border-left: 5px solid pink;
+}
+.section-context-left>ul>li:nth-child(4){
+	border-left: 5px solid silver;
+}
+.section-context-left>ul>li:nth-child(5){
+	border-left: 5px solid brown;
+}
+.section-context-left>ul>li:nth-child(6){
+	border-left: 5px solid orange;
+}
+
+.section-context-left>ul>li:hover{
+	background: rgba(153,204,153,0.7);
+}
+
+.section-context-left>ul>li>a{
+	text-decoration: none;
+	width: 235px;
+	float: left;
+	color: #900b09;
+    box-sizing: border-box;
+	line-height: 50px;
+	text-indent: 30px;
+}
+
+.section-context-left>ul>li>span{
+	float: left;
+	width: 35px;
+	height: 50px;
+	background: url(../img/youbian.png) no-repeat center;
+}
+
+.section-context-left>ul>li:hover>span{
+	background: url(../img/youbian1.png) no-repeat center;
+}
+/*li覆盖效果出现div*/
+.section-context-left>ul>li>div{
+	position: absolute;
+	left: 275px;
+	top: 0px;
+	width: 300px;
+	height: 300px;
+	/*background: purple;*/
+	background: white;
+	display: none;
+	z-index: 500;
+	border: 1px solid transparent;
+	transition: all 1s ease 0s;
+}
+.section-context-left>ul>li:hover>div{
+	display: block;
+	border: 1px solid #ccc;
+}
+
+/*显示链接的样式*/
+.daohang{
+	
+}
+.daohang>ul{
+	list-style: none;
+}
+.daohang>ul>li{
+	height:40px;
+	line-height: 40px;
+	text-align: center;	
+}
+
+.daohang>ul>li>a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	color: sienna;;
+}
+.daohang>ul>li>a:hover{
+	background: salmon;
+	color: white;
+}
+
+
+
+
+/*中间传统轮播图*/
+.section-context-center{
+	width: 725px;
+	height: 300px;
+	position: relative;
+	overflow: hidden;
+}
+
+/*右边显示*/
+.section-context-right{
+	width: 200px;
+	height: 300px;
+	background: white;
+	text-align: center;
+	overflow: hidden;
+	/*background:white url(../img/feiji.png) no-repeat center;*/
+	position: relative;
+}
+.section-context-right>div{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+/*未登录提箱状态*/
+.section-context-right-weidenglu{
+	/*display: none;*/
+	/*display: block;*/
+	text-align: center;
+	overflow: hidden;
+	background: url(../img/feiji.png) no-repeat bottom center;
+}
+.section-context-right-weidenglu>div{
+	width: 60px;
+	height: 60px;
+	margin: auto;
+	background: 1px solid saddlebrown;
+	margin-top: 15px;
+	border: 1px solid saddlebrown;
+	border-radius: 50%;
+}
+.section-context-right-weidenglu>div>img{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+.section-context-right-weidenglu>h2{
+	font-size: 20px;
+	margin-top: 10px;
+	color: #999;
+}
+/*已登录显示身份*/
+.section-context-right-yidenglu{
+	display: none;
+	/*display: block;*/
+	background: url(../img/feiji.png) no-repeat bottom center;
+}
+.section-context-right-yidenglu>div{
+	width: 60px;
+	height: 60px;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 10px;
+	border: 1px solid saddlebrown;
+	border-radius: 50%;
+}
+.section-context-right-yidenglu>div>img{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+.section-context-right-yidenglu>p{
+	margin-top: 10px;
+}
+
