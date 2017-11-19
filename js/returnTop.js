@@ -29,7 +29,7 @@
 	}
 	$(box).click(function(){
 		 $("html,body").animate({
-		 	 "scrollTop":"0"
+		 	 "scrollTop":0
 		 },500,function(){
 		 	  console.log("已经返回顶部")
 		 });
