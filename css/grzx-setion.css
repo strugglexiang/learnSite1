@@ -1,43 +1,105 @@
 body{
 }
 .grzx-section{
-	height: 500px;
-}
-/*------------左边导航部分-----------------------*/
-.leftchild{
+	width: 1200px;
+	/*height: 100px;*/
 	background: white !important;
-	box-sizing: border-box;
-	width: 20%;
-	float: left;
+	margin: auto;
+	margin-top: 50px;
 }
-.leftchild>ul{
+
+/*顶部区域*/
+.g-top{
+	height: 80px;
+}
+.g-top>ul{
 	list-style: none;
-	
 }
-.leftchild>ul>li{
+.g-top>ul>li{
+	box-sizing: border-box;
+	border-top: 5px solid transparent;
+	width: 25%;
+	height: 80px;
+	line-height: 80px;
+	float: left;
+	color: black;
+	font-size: 20px;
+	text-align: center;
+	cursor: pointer;
+	background: #ccc;
+}
+
+.g-top>ul>li.xianshi{
+	border-top: 5px solid seagreen;
+	background: white;
+	color: sandybrown;
+}
+
+
+/*具体盒子*/
+.g-body{
+	position: relative;
+
+}
+.g-body>div{
+	background: white !important;
+	display: none;
+	min-height: 500px;
+}
+/*----------个人资料-----*/
+.g-body>div.ziliao{
+	box-sizing: border-box;
+	padding-left: 50px;
+	display: block;
+}
+.ziliaobox>div{
+	margin-top: 10px;
 	height: 50px;
 }
-.leftchild>ul>li>a{
-	text-align: center;
-	display: block;
-	box-sizing: border-box;
-	padding-left: 15px;
-	width: 100%;
-	height: 100%;
-    line-height: 50px;
-    text-decoration: none;
-    color: black;
-
-}
-.leftchild>ul>li>a:hover{
-}
-.router-link-exact-active{
-	
-}
-
-/*-----------右边内容部分-------------*/
-.rightchild{
-	width: 80%;
+.ziliaobox>div>span{
 	float: left;
-	/*background: white !important;*/
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
 }
+.ziliaobox>div>input[type=text]{
+	/*outline: none;*/
+	/*border: none;*/
+	height: 20px;
+	line-height: 50px;
+	width: 300px;
+	margin: 15px 0 0 15px;
+}
+.ziliaobox>div>input[type=radio]{
+	margin-left: 10px;
+	margin-top: 20px;
+}
+/*文本域*/
+.ziliaobox textarea{
+	width: 300px;
+	height: 100px;
+	margin-top: 20px;
+	margin-left: 15px;
+}
+.ziliaobox button{
+	
+	padding: 8px;
+}
+/*--------------密码设置------------------*/
+.mima{
+	box-sizing: border-box;
+	padding: 20px;
+}
+.mima>div{
+	height: 50px;
+}
+.mima>div>span{
+	display: inline-block;
+	width: 105px;
+}
+.mima>div>input{
+	height: 20px;
+}
+
+
+
