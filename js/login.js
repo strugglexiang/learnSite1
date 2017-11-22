@@ -5,22 +5,22 @@
    	console.log($("body").css("height"));
    	var h=parseFloat($("body").css("height"));
     var s=h-75;
- 
+
     console.log($(".seciton"));
     $(".section").css("height",s)
-   	
-   	
-   	
+
+
+
 	//-----------------搜索框隐藏和显示----------------------------------
 	//点击搜索按钮
-   $(".header-center>span").click(function(){  
-   	     $(this).css("display","none"); 
+   $(".header-center>span").click(function(){
+   	     $(this).css("display","none");
    	     $(".sousuobox-input")[0].focus();
    	     $(".sousuobox").animate({"opacity":"1"},700,function(){
-   	     	 
+
    	     });
-      }); 
-      
+      });
+
     //点击其他部分
     /*
     $(".header").click(function(event){
@@ -32,7 +32,7 @@
     	  }
     })
     */
-   
+
    $(".sousuobox-input").blur(function(){
    	            if($(".sousuobox").is(":animated")){
    	            	 return
@@ -41,7 +41,7 @@
     	  	   	    $(".header-center>span").css("display","block");
     	  	   });
    });
-    
+
     //---------------点击搜索或者按确认键---------------------------
     //确认键
     $(".sousuobox-input").keydown(function(event){
@@ -51,14 +51,14 @@
     });
     //点击搜索
     $(".sousuobox-i").click(sousuo);
-    
+
     //处理方法
     function sousuo(){
     	 console.log(1);
     }
-    
+
     //---------------登陆框业务逻辑----------------------------------------
-    
+
     //信号量
       var check=[];
       check.length=2;
@@ -70,18 +70,18 @@
     $(".name input").blur(function(){
     	//失去
     	$(this).parent().css("border","1px solid #ccc");
-    	
+
     	var str=$(this).val();
     	var zz=/^[0-9a-zA-Z]{6,12}$/g;
-    	
+
     	if(!str){
 
     		$(".name>.right>p").hide();
             $(".name>.right>.err2").show();
             return;
-            
+
     	}
-    	
+
     	if(zz.test(str)){
     		 $(".name>.right>p").hide();
              $(".name>.right>.right").show();
@@ -92,27 +92,27 @@
             $(".name>.right>.err").show();
            check[0]=false;
     	}
-       
-    	
+
+
     })
-    
-    
+
+
     //密码检测
      $(".password input").blur(function(){
      	console.log(1)
      	$(this).parent().css("border","1px solid #ccc");
-     	
+
     	var str=$(this).val();
     	var zz=/^[0-9a-zA-Z]{6,12}$/g;
 //  	console.log(str);
 //  	console.log(Boolean(str));
-    	
+
     	if(!str){
 
     		$(".password>.right>p").hide();
             $(".password>.right>.err2").show();
             return;
-            
+
     	}
     	if(zz.test(str)){
     		 $(".password>.right>p").hide();
@@ -124,14 +124,14 @@
             $(".password>.right>.err").show();
            check[1]=false;
     	}
-        
-    	
+
+
     })
-     
+
      //获得身份信息
-    
-     
-     
+
+
+
      //提交前检测
      $(".bt").click(function(){
      	 var sf=$("select").val();
@@ -140,13 +140,32 @@
      	 		return;
      	 	}
      	 }
-     	
+
      	var obj={
-     		"sf":sf,
-     		"name":$(".name input").val(),
-     		"password":$(".password input").val()
+     		"identity":sf,
+     		"username":$(".name input").val(),
+     		"password":$(".password input").val(),
      	}
-     	console.log(obj)
+     	$.ajax({
+         url:"http://localhost:4000/users/login",
+         type:'post',
+         data:obj,
+         success:function(res){
+             console.log(res)
+             if(res.status=="0"){
+                  alert("登陆成功");
+                  // 如果localstorage里面有backurl, 我们就跳过去, 否则跳回首页
+                  if (localStorage.backurl) {
+                    location.href = localStorage.backurl;
+                  } else {
+                    location.href = 'index.html';
+                  }
+             }
+             else{
+                 alert(res.msg)
+             }
+         }
+      })
      })
-     
+
 })();

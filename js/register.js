@@ -4,20 +4,20 @@
    	console.log($("body").css("height"));
    	var h=parseFloat($("body").css("height"));
     var s=h-75;
- 
+
     console.log($(".seciton"));
    $(".seciton").css("height",s);
-   	
+
 	//-----------------搜索框隐藏和显示----------------------------------
 	//点击搜索按钮
-   $(".header-center>span").click(function(){  
-   	     $(this).css("display","none"); 
+   $(".header-center>span").click(function(){
+   	     $(this).css("display","none");
    	     $(".sousuobox-input")[0].focus();
    	     $(".sousuobox").animate({"opacity":"1"},700,function(){
-   	     	 
+
    	     });
-      }); 
-      
+      });
+
     //点击其他部分
     /*
     $(".header").click(function(event){
@@ -29,7 +29,7 @@
     	  }
     })
     */
-   
+
    $(".sousuobox-input").blur(function(){
    	            if($(".sousuobox").is(":animated")){
    	            	 return
@@ -38,7 +38,7 @@
     	  	   	    $(".header-center>span").css("display","block");
     	  	   });
    });
-    
+
     //---------------点击搜索或者按确认键---------------------------
     //确认键
     $(".sousuobox-input").keydown(function(event){
@@ -48,15 +48,15 @@
     });
     //点击搜索
     $(".sousuobox-i").click(sousuo);
-    
+
     //处理方法
     function sousuo(){
     	 console.log(1);
     }
-    
+
     //---------------注册框业务逻辑----------------------------------------
-    
-    
+
+
     //维护一个一个信号量数字
 //  var checktel;
 //  var checkname;
@@ -64,7 +64,7 @@
 //  var checkpass2;
      var check=[];
      check.length=4;
-    
+
     //电话检测
     $(".telbox input").blur(function(){
     	var str=$(this).val();
@@ -72,7 +72,7 @@
     	if(!str){
     		$(".telbox>.check>p").hide();
            $(".telbox>.check>.err3").show();
-            return;           
+            return;
     	}
     	if(zz.test(str)){
 //  		console.log(1);
@@ -81,16 +81,16 @@
             $(".telbox>.check>.right").show();
 //          checktel=true;
             check[0]=true;
-            
+
     	}
     	else{
-//  		console.log(0); 
+//  		console.log(0);
             $(".telbox>.check>p").hide();
             $(".telbox>.check>.err").show();
             check[0]=false;
     	}
     })
-    
+
     //姓名检测
     $(".namebox input").blur(function(){
     	var str=$(this).val();
@@ -98,7 +98,7 @@
     	if(!str){
     		$(".namebox>.check>p").hide();
            $(".namebox>.check>.err3").show();
-            return;           
+            return;
     	}
     	if(zz.test(str)){
     		 $(".namebox>.check>p").hide();
@@ -111,7 +111,7 @@
            check[1]=false;
     	}
     })
-    
+
     //密码检测
     $(".passbox input").blur(function(){
     	var str=$(this).val();
@@ -119,7 +119,7 @@
     	if(!str){
     		$(".passbox>.check>p").hide();
            $(".passbox>.check>.err3").show();
-            return;           
+            return;
     	}
     	if(zz.test(str)){
     		 $(".passbox>.check>p").hide();
@@ -136,10 +136,10 @@
     		checkpassagin();
     		console.log("111")
     	}
-    	
+
     })
     //再次确认
-  
+
     $(".passboxagin input").blur(checkpassagin);
     function checkpassagin(){
     	//当前输入
@@ -152,7 +152,7 @@
     	if(!str){
     		$(".passboxagin >.check>p").hide();
            $(".passboxagin >.check>.err3").show();
-            return;           
+            return;
     	}
     	//先验证密码格式是否正确
         if(zz.test(str)){
@@ -175,31 +175,48 @@
 //      		checkpass2=false;
                 check[3]=false;
         }
-    	
+
 
     }
-    
+
     //最后提交
     $(".bt").click(function(){
 //  	 console.log(checktel,checkname,checkpass1,checkpass2);
           for(var i=0;i<check.length;i++){
           	  if(!check[i]){
           	  	   console.log("验证有错误项，请重新确认");
-          	  	   return; 
+          	  	   return;
           	  }
           }
-          
+
           console.log("验证正确");
           //验证正确后，可执行ajax
          //发送ajax前，应该要函数节流。
          var obj={
-         	 "sf":$("select").val(),
+         	 "identity":$("select").val(),
          	 "tel":$(".telbox input").val(),
-         	 "name":$(".namebox input").val(),
-         	 "password1":$(".passbox input").val(),
-         	 "password2":$(".passboxagin input").val()
+         	 "username":$(".namebox input").val(),
+         	 "password":$(".passbox input").val(),
          };
-         console.log(obj);
-         
+         console.log(obj)
+
+         //发送ajax请求
+         $.ajax({
+           url: 'http://localhost:4000/users/register',
+           data:obj,
+           type: 'post',
+           success:function(res){
+              console.log(res)
+              if(res.status=="0"){
+                  alert(res.msg)
+              }else{
+                 alert(res.msg)
+              }
+           }
+         })
+
+
+
+
     })
 })();
